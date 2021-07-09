@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" id="HTML">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0060db0e31.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>hereelement</title>
+</head>
+
+<body>
+    <nav>
+        <div id="BUTONexit"><i class="far fa-times-circle"></i><h5>ANASAYFA</h5></div>
+    </nav>
+
+    <section id="section">
+        <ul>
+            <li data-text="ANASAYFA"><a href="#">ANASAYFA</a></li>
+            <li data-text="HAVA DURUMU"><a href="#" id="yenihavadurumu">HAVA DURUMU</a></li>
+            <li data-text="HESAP MAKİNESİ" id="yenihesapmakinesi"><a href="#">HESAP MAKİNESİ</a></li>
+        </ul>
+    </section>
+    <script>
+        const electron = require("electron");
+        const { ipcRenderer } = electron;
+
+        // const { JSDOM } = require( "jsdom" );
+        // const { window } = new JSDOM( "" );
+        // const $ = require( "jquery" )( window );
+
+
+        //dom
+        let hesapmakinesi = document.getElementById("yenihesapmakinesi");
+        let havadurumu = document.getElementById("yenihavadurumu");
+
+        let çıkışbtn = document.getElementById("BUTONexit");
+
+        çıkışbtn.addEventListener("click", () => {
+            ipcRenderer.send("anahtar-exit");
+        });
+
+        havadurumu.addEventListener("click", () => {
+            ipcRenderer.send("anahtar-4", true);
+        });
+
+        hesapmakinesi.addEventListener("click", () => {
+            ipcRenderer.send("anahtar-3", true)
+        });
+
+    </script>
+</body>
+
+</html>

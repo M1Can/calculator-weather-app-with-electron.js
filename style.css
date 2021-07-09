@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+section{
+    height: 479px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0d0f1b;
+    overflow: hidden;
+}
+
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    position: relative;
+    display: inline-block;
+    padding: 6px 15px;
+    text-decoration: none;
+    color: white;
+    background-color: #2196f3;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+ul:hover li a{
+    opacity: 0;
+}
+
+ul li a:hover{
+    transform: scale(1.4);
+    z-index: 500;
+    background-color: #ff3f81;
+    opacity: 1;
+}
+
+
+
+ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 80px;
+    height: 100%;
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    transform: skewX(35deg);
+    transition: 0s;
+}
+
+ul li a:hover:before{
+    left: calc(100% + 100px);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+ul li:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4em;
+    font-weight: 700;
+    pointer-events: none;
+    opacity: 0;
+    letter-spacing: 20px;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+ul li:hover:before{
+    opacity: 0.50;
+    letter-spacing: 0px;
+}
+
+nav{
+    height: 21px;
+    position: relative;
+    top: 0;
+}
+
+#BUTONexit{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    text-align: right;
+    display: block;
+}
+
+#BUTONexit > i{
+    transform: scale(1.2);
+    position: relative;
+    left: 2px;
+    display: inline;
+}
+
+#BUTONexit > i:hover{
+    color: red;
+}
+
+#BUTONexit > h5 {
+    display: inline;
+    position: relative;
+    margin-left: 515px;
+}
