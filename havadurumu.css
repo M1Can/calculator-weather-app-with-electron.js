@@ -1,0 +1,103 @@
+ body {
+     overflow: hidden;
+     font-family: serif;
+     margin: 0;
+     padding: 0;
+     background-color: white;
+     background-size: cover;
+ }
+
+ #NET {
+     position: absolute;
+     height: 479px;
+     width: 450px;
+ }
+
+ #NET * {
+     position: relative;
+     text-align: center;
+ }
+
+ #NET>header>h1 {
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color: orange;
+     text-shadow: 3px 5px #060505bb;
+     letter-spacing: 8pt;
+ }
+
+ #YER {
+     border-top: none;
+     border-bottom: 2px solid orange;
+     border-left: none;
+     border-right: none;
+     width: 448px;
+     height: 30px;
+     color: navy;
+     background-color: transparent;
+ }
+
+ #YER-AD {
+     font-size: 50px;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: 900;
+     color: #ffd700;
+     text-shadow: 2px 2px rgb(0, 0, 0);
+ }
+
+ #DERECE {
+     font-size: 100px;
+     font-family: 'Teko', sans-serif;
+     font-weight: 900;
+     color: rgb(255, 255, 255);
+     text-shadow: 3px 3px rgb(0, 0, 0);
+ }
+
+ #DURUM {
+     font-size: 45px;
+     font-family: 'Roboto Slab', serif;
+     font-weight: 300;
+     color: rgba(13, 144, 215, 0.818);
+     text-shadow: 1px 1px rgb(0, 0, 0);
+     margin-bottom: 11px;
+     ;
+ }
+
+ #MİNMAX {
+     font-size: 15px;
+     font-family: 'Teko', sans-serif;
+     font-weight: 900;
+     color: rgb(255, 255, 255);
+     letter-spacing: 2px;
+ }
+
+ nav{
+    height: 21px;
+    position: relative;
+    top: 0;
+}
+
+#BUTONexit{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    text-align: right;
+    display: block;
+}
+
+#BUTONexit > i{
+    transform: scale(1.2);
+    position: relative;
+    left: 2px;
+    top: 2px;
+    display: inline;
+}
+
+#BUTONexit > i:hover{
+    color: red;
+}
+
+#BUTONexit > h5 {
+    display: inline;
+    position: relative;
+    margin-left: 330px;
+}
