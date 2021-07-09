@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" id="HTML">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="havadurumu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0060db0e31.js" crossorigin="anonymous"></script>
+    <title>HAVA DURUMU | TAERUMMUREAT</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <nav>
+        <div id="BUTONexit"><i class="far fa-times-circle"></i><h5>HAVADURUMU</h5></div>
+    </nav>
+
+    <div id="NET">
+        <header><h1>HAVA DURUMU</h1></header>
+        <br>
+        <input type="text" id="YER" placeholder="Şehir ismi girin">
+        <br><br>
+        <br>
+        <div id="YER-AD"></div>
+        <div id="DERECE"><h2></h2></div>
+        <div id="DURUM"><i></i></div>
+        <div id="MİNMAX"></div>
+    </div>
+
+    <img style="position: absolute; z-index: -999; left: 0px; height: 479px; width: 450px;" id="ID" src="https://st.depositphotos.com/1006137/2877/i/950/depositphotos_28772721-stock-photo-old-paper-grunge-background.jpg"></img>
+    <script src="havadurumu.js"></script>
+    <script>
+        const electron = require("electron");
+        const { ipcRenderer } = electron;
+
+        let çıkışbtn = document.getElementById("BUTONexit");
+
+        çıkışbtn.addEventListener("click", () => {
+            ipcRenderer.send("anahtar-exit-2");
+        });
+    </script>
+    
+</body>
+
+</html>

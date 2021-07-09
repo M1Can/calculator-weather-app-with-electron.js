@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" id="HTML">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hesapmkns.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/0060db0e31.js" crossorigin="anonymous"></script>
+    <title>hereelement</title>
+</head>
+
+<body>         
+
+  <nav>
+    <div id="BUTONexit"><i class="far fa-times-circle"></i><h5>HESAPMAKİNESİ</h5></div>
+</nav>
+<div class="container" >
+  <form name="calc" class="calculator">
+    <input type="text" readonly class="value" name="txt">
+    <span class="num clear" onclick="calc.txt.value = ''">TEMİZLE / C</span>
+    <span class="num" onclick="document.calc.txt.value += '/'">/</span>
+    <span class="num" onclick="document.calc.txt.value += '*'">*</span>
+    <span class="num" onclick="document.calc.txt.value += '7'">7</span>
+    <span class="num" onclick="document.calc.txt.value += '8'">8</span>
+    <span class="num" onclick="document.calc.txt.value += '9'">9</span>
+    <span class="num" onclick="document.calc.txt.value += '-'">-</span>
+    <span class="num" onclick="document.calc.txt.value += '4'">4</span>
+    <span class="num" onclick="document.calc.txt.value += '5'">5</span>
+    <span class="num" onclick="document.calc.txt.value += '6'">6</span>
+    <span class="num plus" onclick="document.calc.txt.value += '+'">+</span>
+    <span class="num" onclick="document.calc.txt.value += '1'">1</span>
+    <span class="num" onclick="document.calc.txt.value += '2'">2</span>
+    <span class="num" onclick="document.calc.txt.value += '3'">3</span>
+    <span class="num" onclick="document.calc.txt.value += '0'">0</span>
+    <span class="num" onclick="document.calc.txt.value += '00'">00</span>
+    <span class="num" onclick="document.calc.txt.value += '.'">.</span>
+    <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+  </form>
+</div>
+<hr>
+    
+    <script src="hesapmkns.js"></script>
+    <script>
+      const electron = require("electron");
+        const { ipcRenderer } = electron;
+
+        let çıkışbtn = document.getElementById("BUTONexit");
+
+        çıkışbtn.addEventListener("click", () => {
+            ipcRenderer.send("anahtar-exit-3");
+        });
+    </script>
+
+
+</body>
+
+</html>
